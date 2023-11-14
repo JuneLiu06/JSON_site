@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 5vw;
+  font-size: 2vw;
+  background-color: #efccfd48;
+}
+
+header nav {
+  display: flex;
+  padding: 0  20vw 2vh  20vw ;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  margin-bottom: 5vw;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%; 
+  text-align: center;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1vw;
+}
+
+header nav a, header nav a:visited {
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+header nav a:hover {
+  background-color: #0b002b;
+  text-align: center;
+  color: #fff;
+}
+
+h1#pageTitle {
+  margin-bottom: 5vw;
+  color: #333;
+}
+
+#outputGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5vw;
+}
+
+
+#outputGrid div:hover {
+  background-color: rgba(0, 98, 255, 0.1);
+}
+
+
+.description {
+  line-height: 1.6; 
+  font-size: 1.5vw; 
+  color: #333; 
+  margin: 10px 0;
+  text-align: justify;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); 
+  padding: 15px; 
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 5px; 
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.project-card {
+  background-size: cover;
+  background-position: center;
+  width: 300px; 
+  height: 200px; 
+  margin: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.project-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-decoration: none;
+  color: white;
+}
+
+.project-title:hover {
+  background-color: #f0f0fc; 
+  color: #010101; 
+  transition: background-color 0.3s, color 0.3s; 
+
+}
+
+.project-title {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 2vw; 
+}
+
+.project-image {
+  max-width: 100%;  
+  height: auto;     
+  display: block;  
+}
+
+
+
+@media screen and (max-width: 768px) {
+  #outputGrid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .project-card {
+    width: auto; 
+  }
+
+  body {
+    padding: 4vw;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #outputGrid {
+    grid-template-columns: 1fr; 
+  }
+
+  .project-card {
+    height: auto; 
+  }
+
+  body {
+    font-size: 5vw;
+  }
+}
